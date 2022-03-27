@@ -1,0 +1,149 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  min-height: 100vh;
+  background-color: beige;
+  font-family: "Calibri";
+}
+
+i {
+  pointer-events: none;
+}
+
+.sequencer {
+  display: flex;
+  flex-direction: column;
+  align-content: center;
+  justify-content: center;
+  min-height: 75vh;
+  padding: 1rem;
+  max-width: 75rem;
+  margin: auto;
+}
+
+.kick-track,
+.snare-track,
+.hihat-track {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  margin-top: 4vh;
+}
+
+.kick,
+.snare,
+.hihat {
+  display: flex;
+  justify-content: flex-end;
+}
+
+.controls {
+  display: flex;
+  justify-content: space-around;
+  align-content: center;
+  align-items: center;
+}
+.controls button {
+  margin: 0.4rem;
+  padding: 0.4rem;
+  background-color: #666;
+  border: none;
+  color: white;
+  cursor: pointer;
+  transition-property: all;
+  transition-duration: 200ms;
+  transition-timing-function: ease;
+}
+
+.mute:hover {
+  background-color: #333333;
+}
+
+.mute.active-mute {
+  background-color: #999999;
+}
+
+select {
+  padding: 0.25rem;
+  font-size: 1rem;
+  border: 1px solid black;
+  background-color: wheat;
+}
+
+.pad {
+  width: calc(2rem + 2vw - 1ex);
+  height: calc(2rem + 2vw - 1ex);
+  margin: 1rem 0.5rem;
+  cursor: pointer;
+  transition-property: all;
+  transition-duration: 200ms;
+  transition-timing-function: ease-out;
+}
+
+.bar-transition {
+  transform: scale(125%);
+}
+
+.kick-pad {
+  background-color: #93e4ec;
+}
+
+.snare-pad {
+  background-color: #9a93ec;
+}
+
+.hihat-pad {
+  background-color: #93ec9a;
+}
+
+.kick-pad.active-pad {
+  background-color: #3ccfdd;
+}
+
+.snare-pad.active-pad {
+  background-color: #493cdd;
+}
+
+.hihat-pad.active-pad {
+  background-color: #3cdd49;
+}
+
+.play {
+  border: none;
+  font-size: 1.5rem;
+  font-family: inherit;
+  max-width: min-content;
+  padding: 0.5rem 1rem;
+  background-color: #666;
+  color: white;
+  margin-top: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+  transition-property: all;
+  transition-duration: 200ms;
+  transition-timing-function: ease;
+}
+.play:hover {
+  background-color: #333333;
+}
+
+.tempo {
+  margin-top: 1rem;
+  margin-left: auto;
+  margin-right: auto;
+  width: 50%;
+}
+.tempo p {
+  font-family: "Calibri";
+  font-size: 1.25rem;
+}
+
+.tempo-slider {
+  width: 100%;
+  padding: 1ex;
+  cursor: pointer;
+}
